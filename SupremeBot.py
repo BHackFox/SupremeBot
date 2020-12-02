@@ -18,11 +18,11 @@ def Banner():
     return banner
 
 def Legal():
-    lega = r"""
+    legal = r"""
                             SupremeBot by BHackFox
                     https://github.com/BHackFox/SupremeBot
     """
-    print(lega)
+    print(legal)
 
 class Bot_Supreme:
     def __init__(self):
@@ -163,7 +163,7 @@ class JsonContent:
 
         for i in self.jsonconfigfile:
             print(self.jsonconfigfile[i])
-        rs = str(input("Your data is correct? (Yes/No): ")).lower()
+        rs = str(input("Your data are correct? (Yes/No): ")).lower()
         if rs == "n" or rs == "no":
             self.CreateContent()
 
@@ -173,7 +173,7 @@ def main():
     print(Banner())
     Legal()
     time.sleep(1)
-    first = str(input("Do you want to check your data? (Yes/no): "))
+    first = str(input("Do you want to check your data? (Yes/no): ")).lower()
     if first == "y" or first == "yes":
         JsonContent()
     print("Open Webdriver...")

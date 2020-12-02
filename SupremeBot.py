@@ -179,6 +179,16 @@ def main():
     print("Open Webdriver...")
     Bot = Bot_Supreme()
     print("Start Listening for new articles...")
+    tmp = urllib.request.urlopen(self.base_url)
+    tmp_string = tmp.read().decode()
+    j = 0
+    tmp_comp = []
+    for i in range(len(tmp_string)):
+        if tmp_string[i] == ">":
+            tmp_comp.append(tmp_string[j:i+1])
+            j = i+1
+    with open("data/old.txt","w") as wr:
+        wr.write("\n".join(tmp_comp))
     content = Scrap()
     while content == None:
         time_now = datetime.datetime.now().strftime("%X")

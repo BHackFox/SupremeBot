@@ -6,17 +6,14 @@ import os
 
 class SetOS:
     def Importing_From_Os(self):
-        if sys.platform == "win32":
-            Win()
-        elif sys.platform == "linux" or sys.platform == "linux2":
-            modules_imp = ["selenium","datetime","tarfile","urllib","json"]
-            for i in modules_imp:
-                try:
-                    print("Importing "+i)
-                    __import__(i)
-                except ImportError as e:
-                    print(e)
-                    os.system("pip3 install "+i)
+        modules_imp = ["selenium","datetime","tarfile","urllib","json"]
+        for i in modules_imp:
+            try:
+                print("Importing "+i)
+                __import__(i)
+            except ImportError as e:
+                print(e)
+                os.system("pip3 install "+i)
 
 
     def DriverSetter(self):

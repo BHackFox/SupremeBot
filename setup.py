@@ -1,5 +1,4 @@
 import sys
-import tarfile
 import os
 
 
@@ -17,6 +16,7 @@ class SetOS:
 
 
     def DriverSetter(self):
+        import tarfile
         if sys.platform == "win32":
             print("OS Detected: Windows")
             tar = tarfile.open("bin/chromedriver_win.tar.gz")

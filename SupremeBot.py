@@ -172,7 +172,7 @@ class JsonContent:
 def main():
     print(Banner())
     Legal()
-    time.sleep(3)
+    time.sleep(1)
     first = str(input("Do you want to check your data? (Yes/no): "))
     if first == "y" or first == "yes":
         JsonContent()

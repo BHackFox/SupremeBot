@@ -6,13 +6,13 @@ import os
 class SetOS:
     def Importing_From_Os(self):
         modules_imp = ["selenium","datetime","tarfile","urllib","json"]
-        for i in modules_imp:
+        for module in modules_imp:
             try:
-                print("Importing "+i)
-                __import__(i)
+                print("Importing "+module)
+                __import__(module)
             except ImportError as e:
                 print(e)
-                os.system("pip3 install "+i)
+                os.system("pip3 install "+module)
 
 
     def DriverSetter(self):

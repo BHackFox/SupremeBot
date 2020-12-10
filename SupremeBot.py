@@ -181,7 +181,7 @@ def main():
     print("Open Webdriver...")
     Bot = Bot_Supreme()
     print("Start Listening for new articles...")
-    tmp = urllib.request.urlopen("https://www.supremenewyork.com")
+    tmp = urllib.request.urlopen("https://www.supremenewyork.com/shop/")
     tmp_string = tmp.read().decode()
     j = 0
     tmp_comp = []

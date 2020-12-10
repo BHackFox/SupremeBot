@@ -33,6 +33,8 @@ class Bot_Supreme:
         else:
             try:
                 self.driver = webdriver.Chrome("./chromedriver")
+            except:
+                print("Error configuring webdriver")
 
     def Start(self,link):
         with open('data/data.JSON') as json_file:
